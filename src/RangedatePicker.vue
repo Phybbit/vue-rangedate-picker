@@ -49,6 +49,7 @@
             :class="{'active-preset': presetActive === item.label}">
             {{item.label}}
           </li>
+          <li><button class="calendar-btn-apply" @click="setDateValue()">{{captions.ok_button}}</button></li>
         </ul>
       </div>
     </div>
@@ -266,6 +267,12 @@ li.calendar_days_in-range {
 }
 
 .calendar-btn-apply {
+  width: 100%;
+  background: #f7931e;
+  color: #fff;
+  border: none;
+  padding: 5px;
+  font-size: 14px;
   background: #f7931e;
 }
 

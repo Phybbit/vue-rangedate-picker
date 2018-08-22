@@ -388,9 +388,14 @@ export default {
       this.presetActive = item.label
       this.dateRange = item.dateRange
       // update start active month
-      this.activeMonthStart = this.dateRange.start.getMonth()
-      this.activeYearStart = this.dateRange.start.getFullYear()
+      this.activeMonthStart = this.dateRange.end.getMonth()
+      this.activeYearStart = this.dateRange.end.getFullYear()
       this.activeYearEnd = this.dateRange.end.getFullYear()
+
+      // when the current month is this month, favor displaying it on the right side
+      if (this.activeMonthStart === new Date().getMonth()) {
+        this.activeMonthStart -= 1
+      }
     },
     onSelected: function () {
       this.$emit('selected', this.dateRange)

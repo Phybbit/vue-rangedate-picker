@@ -268,7 +268,6 @@ li.calendar_days_in-range {
 
 .calendar-btn-apply {
   width: 100%;
-  background: #f7931e;
   color: #fff;
   border: none;
   padding: 5px;

@@ -2,10 +2,6 @@
   <div class="calendar-root">
     <div class="input-date" @click="toggleCalendar()"> {{getDateString(dateRange.start)}} - {{getDateString(dateRange.end)}}</div>
     <div class="calendar" :class="{'calendar-mobile ': isCompact, 'calendar-right-to-left': isRighttoLeft}" v-if="isOpen">
-      <div class="calendar-head" v-if="!isCompact">
-        <h2>{{captions.title}}</h2>
-        <i class="close" @click="toggleCalendar()">&times</i>
-      </div>
       <div class="calendar-wrap">
         <div class="calendar_month_left" :class="{'calendar-left-mobile': isCompact}" v-if="showMonth">
           <div class="months-text">
@@ -115,7 +111,7 @@
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 700px;
   font-size: 12px;
-  height: 300px;
+  height: 235px;
   box-shadow: -3px 4px 12px -1px #ccc;
   background: #fff;
   position: absolute;
@@ -154,7 +150,7 @@
   float: left;
   padding: 0 12px;
   border-left: 1px solid #ccc;
-  margin: -2px;
+  margin-top: 44px;
 }
 
 .calendar-left-mobile {
@@ -197,7 +193,7 @@
 }
 
 .calendar_preset li {
-  line-height: 2.6em;
+  line-height: 2.1em;
   width: auto;
   display: block;
 }
